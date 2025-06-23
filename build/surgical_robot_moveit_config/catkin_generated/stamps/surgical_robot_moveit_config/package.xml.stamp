@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>surgical_robot_moveit_config</name>
+  <version>0.3.0</version>
+  <description>
+    An automatically generated package with all the configuration and launch files for using the surgical_robotic_arm with the MoveIt Motion Planning Framework
+  </description>
+  <author email="kplomari@gmail.com">Kostas Plom</author>
+  <maintainer email="kplomari@gmail.com">Kostas Plom</maintainer>
+  <license>BSD</license>
+  <url type="website">http://moveit.ros.org/</url>
+  <url type="bugtracker">https://github.com/moveit/moveit/issues</url>
+  <url type="repository">https://github.com/moveit/moveit</url>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>moveit_fake_controller_manager</exec_depend>
+  <exec_depend>moveit_kinematics</exec_depend>
+  <exec_depend>moveit_planners</exec_depend>
+  <exec_depend>moveit_ros_visualization</exec_depend>
+  <exec_depend>moveit_setup_assistant</exec_depend>
+  <exec_depend>moveit_simple_controller_manager</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>my_robot_description</exec_depend>
+  
+  <!-- The next 2 packages are required for the gazebo simulation.
+       We don't include them by default to prevent installing gazebo and all its dependencies. -->
+  <!-- <exec_depend>joint_trajectory_controller</exec_depend> -->
+  <!-- <exec_depend>gazebo_ros_control</exec_depend> -->
+  
+  <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. 
+       Commented the dependency until this works. -->
+  <!-- <exec_depend>warehouse_ros_mongo</exec_depend> -->
+  
+  <export>
+  </export>
+</package>

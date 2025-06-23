@@ -1,0 +1,29 @@
+{
+  "name": "ROS Noetic with GUI",
+  "image": "ubuntu:20.04",
+  
+  "runArgs": [
+  "--env=DISPLAY=${localEnv:DISPLAY}",
+  "--env=QT_X11_NO_MITSHM=1", 
+  "--env=XDG_RUNTIME_DIR=/tmp/runtime-root",
+  "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
+  "--gpus=all",
+  "--network=host"
+],
+  
+  "postCreateCommand": "apt-get update && apt-get install -y curl gnupg2 lsb-release x11-apps nano vim git wget && curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add - && echo 'deb http://packages.ros.org/ros/ubuntu focal main' > /etc/apt/sources.list.d/ros-latest.list && apt-get update && apt-get install -y ros-noetic-desktop-full ros-noetic-joint-state-publisher-gui python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential && rosdep init && rosdep update",
+  
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-python.python"
+      ]
+    }
+  },
+  
+  "remoteUser": "root"
+}

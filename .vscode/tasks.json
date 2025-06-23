@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "catkin_make",
+            "type": "shell",
+            "command": "docker exec ros_noetic bash -c 'cd /root/ros_noetic_ws && source /opt/ros/noetic/setup.bash && catkin_make'",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "check_urdf",
+            "type": "shell",
+            "command": "docker exec ros_noetic bash -c 'source /opt/ros/noetic/setup.bash && check_urdf /root/ros_noetic_ws/src/robotic_arm/urdf/robot_arm_6dof.urdf'",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

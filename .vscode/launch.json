@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Launch RViz",
+            "type": "ros",
+            "request": "launch",
+            "target": "${workspaceFolder}/src/robotic_arm/launch/display.launch",
+            "preLaunchTask": "catkin_make"
+        }
+    ]
+}   
