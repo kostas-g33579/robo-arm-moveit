@@ -1,0 +1,14 @@
+controller_list:
+  - name: fake_surgical_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1_base_rotation
+      - joint2_shoulder_pitch
+      - joint3_shoulder_roll
+      - joint4_elbow_pitch
+      - joint5_wrist_pitch
+      - joint6_wrist_roll
+      - joint7_needle_extension
+initial:  # Define initial robot poses per group
+  - group: surgical_arm
+    pose: home

@@ -1,0 +1,13 @@
+controller_list:
+  - name: surgical_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint1_base_rotation
+      - joint2_shoulder_pitch
+      - joint3_shoulder_roll
+      - joint4_elbow_pitch
+      - joint5_wrist_pitch
+      - joint6_wrist_roll
+      - joint7_needle_extension
