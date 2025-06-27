@@ -8,7 +8,6 @@ controller_list:
       - joint4_elbow_pitch
       - joint5_wrist_pitch
       - joint6_wrist_roll
-      - joint7_needle_extension
 initial:  # Define initial robot poses per group
   - group: surgical_arm
     pose: home
